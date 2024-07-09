@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-header {
+header,
+main {
     padding-inline: 100px;
 }
 
@@ -13,12 +14,9 @@ body {
     font-size: 16px;
 }
 
-main {
-    padding-inline: 100px;
-}
-
 @media (max-width: 768px) {
-    body {
-        margin-inline: 40px;
+    header,
+    main {
+        padding-inline: 40px;
     }
 }

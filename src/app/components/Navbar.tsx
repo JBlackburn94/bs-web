@@ -63,18 +63,18 @@ export default function Navbar() {
         </div>
         {nav ? (
           <FaTimes
-            className="text-[28px] lg:hidden z-10"
+            className="text-[28px] lg:hidden z-50"
             onClick={() => setNav(!nav)}
           />
         ) : (
           <MdMenu
-            className="text-[28px] lg:hidden z-10"
+            className="text-[28px] lg:hidden z-50"
             onClick={() => setNav(!nav)}
             id="navElement"
           />
         )}
         {nav && (
-          <div className="w-1/2 h-screen bg-black right-0 top-0 absolute flex items-center justify-center flex-col gap-[40px]">
+          <div className="w-1/2 h-screen bg-black right-0 top-0 absolute flex items-center justify-center flex-col gap-[40px] z-40">
             {navLinks.map((link) => (
               <a key={link.id} href={link.path} className="uppercase">
                 {link.name}
