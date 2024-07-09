@@ -11,8 +11,9 @@ import { MdMenu } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -23,10 +24,19 @@ export default function Navbar() {
       scale: 1,
       stagger: 0.2,
     });
+    gsap.to("#header", {
+      backgroundColor: "#000000",
+      scrollTrigger: {
+        trigger: "#header",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
   });
 
   return (
-    <header className="select-none">
+    <header className="select-none fixed w-full py-2" id="header">
       <nav className="flex items-center justify-between">
         <div id="navElement" className="opacity-0">
           <Image src={heroImg} alt="Beauty School Logo" />
