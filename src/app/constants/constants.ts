@@ -19,5 +19,15 @@ export const navLinks = [
         name: "Contact",
         path: "/",
     }
-]
+]; 
 
+export const shows = [
+    {
+        id: 1,
+        date: "10/06/2024",
+        venue: "O2 Islington Academy",
+        location: "London",
+        country: "UK",
+        ticketLink: "#",
+    },
+];

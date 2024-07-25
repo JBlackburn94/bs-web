@@ -36,7 +36,7 @@ export default function Navbar() {
   });
 
   return (
-    <header className="select-none fixed w-full py-2" id="header">
+    <header className="select-none fixed w-full py-2 z-50" id="header">
       <nav className="flex items-center justify-between">
         <div id="navElement" className="opacity-0">
           <Image src={heroImg} alt="Beauty School Logo" />
